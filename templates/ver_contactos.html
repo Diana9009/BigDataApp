@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensajes de Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Mensajes de Contacto</h2>
+
+    {% if mensajes %}
+    <table class="table table-bordered table-striped" style="color: #003366;">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Asunto</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in mensajes %}
+            <tr>
+                <td>{{ m.fecha.strftime('%Y-%m-%d %H:%M') if m.fecha else '' }}</td>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.email }}</td>
+                <td>{{ m.asunto }}</td>
+                <td>{{ m.mensaje }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info">No hay mensajes registrados.</div>
+    {% endif %}
+
+    <!-- Botón de volver al menú -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary"> Atrás al menú principal</a>
+    </div>
+</div>
+</body>
+</html>

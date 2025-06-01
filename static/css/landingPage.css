@@ -1,0 +1,25 @@
+
+body {
+    background: linear-gradient(to right, #8360c3, #6e9eca);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: linear-gradient(90deg, #d0c4e5, #a3bce2);
+    padding: 1rem 0;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.9);  /* Blanco con leve transparencia */
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+footer {
+    background-color: rgba(101, 116, 112, 0.9);
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: #f8f7f7;
+}
+    
